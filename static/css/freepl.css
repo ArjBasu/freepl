@@ -1,0 +1,48 @@
+@CHARSET "UTF-8";
+.pull-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header{
+	text-transform:uppercase;
+}
+
+.icons {
+  list-style-type: none;
+  margin-left: 2em;
+  text-indent: -1em;
+}
+.icons li [class^="icon-"], .icons li [class*=" icon-"] {
+  display: inline-block;
+  text-align: center;
+  width: 1em;
+}
+.icons li small {
+  display: block;
+  text-indent: 0;
+}
+
+/* big icons */
+.huge-icon {
+  font-size: 3em;
+}
+
+.enormous-icon {
+  font-size: 5em;
+  line-height: 1;
+}
+.enormous-icon.circled {
+  display: block;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.4em;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #333333;
+  color: white;
+}

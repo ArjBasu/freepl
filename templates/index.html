@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{%block title %} {{title}} {% endblock %}
+{% block head %}
+    {{ parent() }}
+    <script type = "text/javascript" src = "/static/js/index.js"></script>
+{% endblock %}
+
+{%block body %}
+	<div class = "row-fluid">
+		<div class = "span12 pull-center">
+			<h1 class = "pull-center">Welcome to FreePL</h1>
+		</div>
+	</div>
+{% endblock %}
