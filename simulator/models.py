@@ -25,6 +25,7 @@ class players(models.Model):
     player_wickets = models.IntegerField("Wickets")
     player_bowl_avg = models.FloatField("Bowling_Average",default = "0.00")
     player_catches = models.IntegerField("Catches",default = 0)
+    player_cost = models.IntegerField("Payer_Cost",default = 0)
     def __unicode__(self):
         return self.player_name
     

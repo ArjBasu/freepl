@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-from simulator.views import landing
+from simulator.views import *
 from simulator.models import users
 
 # Uncomment the next two lines to enable the admin:
@@ -16,5 +16,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
      url(r'^freepl/admin/', include(admin.site.urls)),
-    url(r'^freepl/$',landing),
+     url(r'^freepl/$',landing),
+     url(r'^freepl/extract/$',extract),
+    
 )
