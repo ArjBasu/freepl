@@ -1,6 +1,6 @@
 # Create your views here.
 from django.shortcuts import render
-from simulator.models import users
+from simulator.models import players,performance,users
 from django.http import HttpResponse,HttpResponseRedirect
 from pyquery import PyQuery as pq
 
@@ -11,7 +11,6 @@ def landing(request):
     
 def extract(request):
     teams = [1,2,3,5,6,8]
-    response = "<html><body>"
     for team in teams:
         link = "http://www.espncricinfo.com/india/content/player/country.html?country="+str(team)
         page = pq(url = link)
@@ -43,9 +42,11 @@ def extract(request):
             wickets = pl(".engineTable").eq(1).find(".data1").eq(1).find("td").eq(5).html()
             bowlavg = pl(".engineTable").eq(1).find(".data1").eq(1).find("td").eq(8).html()
             if(bowlavg == "-"):
-                bowlavg = 0
-                
-            response += "<br/>Name:"+str(name)+"<br/>Country:"+str(country)+"<br/>Matches:"+str(matches)+"<br/>Batting Average:"+str(battingavg)+"<br/>Role:"+str(role) +"<br/>Runs:"+str(runs) + "<br/>"
+                bowlavg = 0 
+            
         
-    response+= "</body></html>"
+    response = "<html></html>"
     return HttpResponse(response)
+
+def team(request):
+    return render(request,"team.html")

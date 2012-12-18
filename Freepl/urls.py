@@ -18,5 +18,6 @@ urlpatterns = patterns('',
      url(r'^freepl/admin/', include(admin.site.urls)),
      url(r'^freepl/$',landing),
      url(r'^freepl/extract/$',extract),
+     url(r'^freepl/myteam/$',team),
     
 )

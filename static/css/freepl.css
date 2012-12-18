@@ -46,3 +46,25 @@
   background-color: #333333;
   color: white;
 }
+
+.header{
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+.page-header{
+	padding-top:20px;
+	padding-bottom:20px;
+	background-image:url("../img/patterns/lghtmesh.png");
+}
+
+
+.threecolumn{
+	padding-left:20px;
+	padding-right:20px;
+	background-color:#EFEFEF;
+}
+
+
+
+
