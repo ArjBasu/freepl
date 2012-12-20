@@ -50,12 +50,15 @@
 .header{
 	text-transform:uppercase;
 	font-weight:bold;
+	
 }
 
 .page-header{
 	padding-top:20px;
 	padding-bottom:20px;
 	background-image:url("../img/patterns/lghtmesh.png");
+	color:#41B7D8;
+	text-transform:uppercase;
 }
 
 
