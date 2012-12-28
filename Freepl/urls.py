@@ -17,6 +17,7 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
      url(r'^freepl/admin/', include(admin.site.urls)),
      url(r'^freepl/$',landing),
+     url(r'^freepl/dashboard/$',dashboard),
      url(r'^freepl/extract/$',extract),
      url(r'^freepl/myteam/$',team),
     

@@ -1,10 +1,10 @@
 # Create your views here.
 from django.shortcuts import render
-from simulator.models import players,performance,users
+from simulator.models import players
 from django.http import HttpResponse,HttpResponseRedirect
 from pyquery import PyQuery as pq
 
-def landing(request):
+def dashboard(request):
     return render(request,"index.html",{
         "title":"Welcome to Freepl",
                                  })
@@ -41,12 +41,32 @@ def extract(request):
             catches = pl(".engineTable").eq(0).find(".data1").eq(1).find("td").eq(13).html()
             wickets = pl(".engineTable").eq(1).find(".data1").eq(1).find("td").eq(5).html()
             bowlavg = pl(".engineTable").eq(1).find(".data1").eq(1).find("td").eq(8).html()
+            
             if(bowlavg == "-"):
                 bowlavg = 0 
+                
+                
+            playertemp = players(
+                         player_name = str(name),
+                         player_country = str(country),
+                         player_role = str(role),
+                         player_bat_avg = float(battingavg), 
+                         player_matches = int(matches),
+                         player_runs = int(runs),
+                         player_wickets = int(wickets),
+                         player_bowl_avg = float(bowlavg),
+                         player_catches = int(catches), 
+                         player_cost = 0
+                         )
+            playertemp.save() 
+            
             
         
     response = "<html></html>"
     return HttpResponse(response)
+
+def landing(request):
+    return render(request,"landing.html",{"title":"FreePL",})
 
 def team(request):
     return render(request,"team.html")

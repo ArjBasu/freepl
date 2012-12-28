@@ -68,6 +68,7 @@
 	background-color:#EFEFEF;
 }
 
-
-
-
+#landingNavbar .navbar-inner, #loggedNavbar .navbar-inner{
+	padding-left:30px;
+	padding-right:30px;
+}

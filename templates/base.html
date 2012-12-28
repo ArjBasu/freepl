@@ -3,7 +3,7 @@
 	<head>
 		{% block head %}
 		<title>{% block title%} {% endblock %}</title>
-		<link href = "/static/css/cerulean/bootstrap.css" rel="stylesheet">
+		<link href = "/static/css/superhero/bootstrap.css" rel="stylesheet">
 		<link href = "/static/css/font-awesome.css" rel="stylesheet">
 		<link href = "/static/css/freepl.css" rel = "stylesheet">
 		<script src = "/static/js/jquery.js" type = "text/javascript"></script>
@@ -13,11 +13,11 @@
 	</head>
 	
 	<body>
+		{% block body %}
 		<div class = "container-fluid">
 		{% include 'header.html' %}
-		{% block body %}
-		{% endblock %}
 		</div>
+		{% endblock %}
 		{% include 'footer.html' %}
 	</body>	
 </html>
